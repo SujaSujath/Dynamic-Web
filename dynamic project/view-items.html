@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>View Reported Items</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #ff9800;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+    }
+    .item-card {
+      border: 1px solid #ddd;
+      margin-bottom: 20px;
+      padding: 15px;
+      border-radius: 8px;
+      display: flex;
+      gap: 15px;
+    }
+    .item-card img {
+      width: 150px;
+      height: auto;
+      border-radius: 5px;
+    }
+    .item-info {
+      flex: 1;
+    }
+    h3 {
+      margin-top: 0;
+    }
+    a {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #ff9800;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>All Reported Items</h1>
+  </header>
+
+  <div class="container">
+    <!-- This part loads dynamic content from PHP -->
+    <?php include 'view-items.php'; ?>
+  </div>
+
+  <a href="index.html">← Back to Home</a>
+
+</body>
+</html>

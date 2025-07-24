@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Report Found Item</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #28a745;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      background-color: white;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    input[type="text"],
+    textarea,
+    input[type="file"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      background-color: #28a745;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #1e7e34;
+    }
+    a {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      text-decoration: none;
+      color: #28a745;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Report Found Item</h1>
+  </header>
+
+  <div class="container">
+    <form action="submit-found.php" method="POST" enctype="multipart/form-data">
+      <label for="item_name">Item Name:</label>
+      <input type="text" id="item_name" name="item_name" required>
+
+      <label for="description">Description:</label>
+      <textarea id="description" name="description" rows="4" required></textarea>
+
+      <label for="location">Where You Found It:</label>
+      <input type="text" id="location" name="location" required>
+
+      <label for="contact">Your Contact (Phone or Email):</label>
+      <input type="text" id="contact" name="contact" required>
+
+      <label for="item_image">Upload an Image of the Item:</label>
+      <input type="file" id="item_image" name="item_image" accept="image/*" required>
+
+      <button type="submit">Submit Report</button>
+    </form>
+
+    <a href="index.html">← Back to Home</a>
+  </div>
+
+</body>
+</html>
